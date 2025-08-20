@@ -1,4 +1,5 @@
 import JobForm from "./JobForm";
+import { getH1ForPath } from "@/lib/seo";
 
 const Careers = ({ h1 }) => {
   return (
@@ -8,5 +9,7 @@ const Careers = ({ h1 }) => {
   );
 };
 
-export default Careers;
-
+export default function Page() {
+  const h1 = getH1ForPath("/careers");
+  return <Careers h1={h1} />;
+}

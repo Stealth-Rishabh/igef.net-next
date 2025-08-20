@@ -12,6 +12,7 @@ import Newsletter from "@/components/Newsletter";
 // import { Link } from "react-router-dom";
 import AboutSidebar from "@/components/AboutSidebar";
 import { IndustryMarquee } from "../IndustryMarquee";
+import { getH1ForPath } from "@/lib/seo";
 
 const sidebarLinks = [
   { href: "/placements/campus-recruitments", label: "Campus Recruitments" },
@@ -55,7 +56,10 @@ const IndustrySpeaks = ({ h1 }) => {
   );
 };
 
-export default IndustrySpeaks;
+export default function Page() {
+  const h1 = getH1ForPath("/placements/industry-speaks");
+  return <IndustrySpeaks h1={h1} />;
+}
 
 const Testimonials = () => {
   const testimonials = [

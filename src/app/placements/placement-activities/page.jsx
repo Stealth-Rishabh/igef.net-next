@@ -25,6 +25,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { getH1ForPath } from "@/lib/seo";
 
 const features = [
   {
@@ -129,7 +130,10 @@ const PlacementActivities = ({ h1 }) => {
   );
 };
 
-export default PlacementActivities;
+export default function Page() {
+  const h1 = getH1ForPath("/placements/placement-activities");
+  return <PlacementActivities h1={h1} />;
+}
 
 const TrainingPrograms = () => (
   <section className="">

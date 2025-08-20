@@ -7,6 +7,7 @@ import Newsletter from "@/components/Newsletter";
 import AboutSidebar from "@/components/AboutSidebar";
 
 import IconMarquee from "../IconMarquee";
+import { getH1ForPath } from "@/lib/seo";
 
 const icons = [
   // { src: ashoklayland, alt: "Ashok Leyland" }  ,
@@ -73,4 +74,7 @@ const OurRecruiters = ({ h1 }) => {
   );
 };
 
-export default OurRecruiters;
+export default function Page() {
+  const h1 = getH1ForPath("/placements/our-recruiters");
+  return <OurRecruiters h1={h1} />;
+}

@@ -12,6 +12,7 @@ import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
 import Image from "next/image";
+import { getH1ForPath } from "@/lib/seo";
 
 const breadcrumbItems = [
   { href: "/", label: "Home" },
@@ -60,7 +61,10 @@ const NotableAlumni = ({ h1 }) => {
   );
 };
 
-export default NotableAlumni;
+export default function Page() {
+  const h1 = getH1ForPath("/about/notable-alumni");
+  return <NotableAlumni h1={h1} />;
+}
 
 const testimonials = [
   {

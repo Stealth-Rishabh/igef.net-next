@@ -18,6 +18,7 @@ import {
   HeartIcon,
 } from "lucide-react";
 import Image from "next/image";
+import { getH1ForPath } from "@/lib/seo";
 
 const data = [
   {
@@ -145,7 +146,10 @@ const IndustryOrientedCurriculum = ({ h1 }) => {
   );
 };
 
-export default IndustryOrientedCurriculum;
+export default function Page() {
+  const h1 = getH1ForPath("/why-indo-global/industry-oriented-curriculum");
+  return <IndustryOrientedCurriculum h1={h1} />;
+}
 
 const IndustryOrientedCurriculumSection = ({ data, order }) => {
   return (

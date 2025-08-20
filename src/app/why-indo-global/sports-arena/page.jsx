@@ -8,6 +8,7 @@ import Newsletter from "@/components/Newsletter";
 import AboutSidebar from "@/components/AboutSidebar";
 import { sportsData } from "../data";
 import Image from "next/image";
+import { getH1ForPath } from "@/lib/seo";
 
 const sidebarLinks = [
   {
@@ -65,7 +66,10 @@ const SportsArena = ({ h1 }) => {
   );
 };
 
-export default SportsArena;
+export default function Page() {
+  const h1 = getH1ForPath("/why-indo-global/sports-arena");
+  return <SportsArena h1={h1} />;
+}
 
 const Gallery = ({ imageItems }) => {
   const { title, description, items } = imageItems;

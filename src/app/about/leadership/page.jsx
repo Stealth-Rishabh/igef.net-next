@@ -9,6 +9,7 @@ import Newsletter from "@/components/Newsletter";
 // import { Link } from "react-router-dom";
 import AboutSidebar from "@/components/AboutSidebar";
 import Image from "next/image";
+import { getH1ForPath } from "@/lib/seo";
 
 const breadcrumbItems = [
   { href: "/", label: "Home" },
@@ -114,4 +115,7 @@ const Leadership = ({ h1 }) => {
   );
 };
 
-export default Leadership;
+export default function Page() {
+  const h1 = getH1ForPath("/about/leadership");
+  return <Leadership h1={h1} />;
+}

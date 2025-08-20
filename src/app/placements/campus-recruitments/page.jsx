@@ -12,6 +12,7 @@ import AboutSidebar from "@/components/AboutSidebar";
 import PlacementProcess from "../PlacementProcess";
 import { Users, Laptop, Lightbulb, Network } from "lucide-react";
 import Image from "next/image";
+import { getH1ForPath } from "@/lib/seo";
 
 const features = [
   {
@@ -128,7 +129,10 @@ const CampusRecruitments = ({ h1 }) => {
   );
 };
 
-export default CampusRecruitments;
+export default function Page() {
+  const h1 = getH1ForPath("/placements/campus-recruitments");
+  return <CampusRecruitments h1={h1} />;
+}
 
 const CampusGallery = () => {
   return (

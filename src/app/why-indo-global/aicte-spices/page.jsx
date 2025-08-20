@@ -16,6 +16,7 @@ import {
 } from "@/components/ui/accordion";
 import { CheckCircle, BookOpen, Users, Target, Lightbulb } from "lucide-react";
 import { useState } from "react";
+import { getH1ForPath } from "@/lib/seo";
 
 const sidebarLinks = [
   {
@@ -70,7 +71,10 @@ const AiciteSpices = ({ h1 }) => {
   );
 };
 
-export default AiciteSpices;
+export default function Page() {
+  const h1 = getH1ForPath("/why-indo-global/aicte-spices");
+  return <AiciteSpices h1={h1} />;
+}
 
 function AiciteSpicesItem() {
   const [activeTab, setActiveTab] = useState("about");

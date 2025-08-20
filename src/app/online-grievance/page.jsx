@@ -11,6 +11,7 @@ import {
 } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
+import { getH1ForPath } from "@/lib/seo";
 
 function StudentGrievance({ h1 }) {
   const [formData, setFormData] = useState({
@@ -273,3 +274,8 @@ function StudentGrievance({ h1 }) {
 }
 
 export default StudentGrievance;
+
+export function Page() {
+  const h1 = getH1ForPath("/online-grievance");
+  return <StudentGrievance h1={h1} />;
+}

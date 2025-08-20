@@ -10,6 +10,7 @@ import Newsletter from "@/components/Newsletter";
 import { MapPin, Phone, Globe, Mail, Building } from "lucide-react";
 import AboutSidebar from "@/components/AboutSidebar";
 import Image from "next/image";
+import { getH1ForPath } from "@/lib/seo";
 
 const breadcrumbItems = [
   { href: "/", label: "Home" },
@@ -108,7 +109,10 @@ const CollegeLocation = ({ h1 }) => {
   );
 };
 
-export default CollegeLocation;
+export default function Page() {
+  const h1 = getH1ForPath("/about/location");
+  return <CollegeLocation h1={h1} />;
+}
 
 const LocationItem = ({ location, index }) => {
   const { title, details, image } = location;

@@ -13,8 +13,9 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import Link from "next/link";
+import { getH1ForPath } from "@/lib/seo";
 
-export default function AlumniSignup({ h1 }) {
+function AlumniSignup({ h1 }) {
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -319,4 +320,9 @@ export default function AlumniSignup({ h1 }) {
       </Card>
     </div>
   );
+}
+
+export default function Page() {
+  const h1 = getH1ForPath("/alumni-signup");
+  return <AlumniSignup h1={h1} />;
 }

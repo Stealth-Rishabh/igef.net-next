@@ -10,6 +10,7 @@ import Stats from "@/components/Stats";
 import Newsletter from "@/components/Newsletter";
 //imgs
 import AboutSidebar from "@/components/AboutSidebar";
+import { getH1ForPath } from "@/lib/seo";
 
 const icons = [
   { src: "/assets/about/tieUps/ashoklayland.png", alt: "Ashok Leyland" },
@@ -71,4 +72,7 @@ const AccreditationAndTieups = ({ h1 }) => {
   );
 };
 
-export default AccreditationAndTieups;
+export default function Page() {
+  const h1 = getH1ForPath("/about/accreditation");
+  return <AccreditationAndTieups h1={h1} />;
+}

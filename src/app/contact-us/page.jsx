@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { Toaster } from "@/components/ui/toaster";
+import { getH1ForPath } from "@/lib/seo";
 
 const Contact = ({ h1 }) => {
   const { toast } = useToast();
@@ -315,5 +316,7 @@ const Contact = ({ h1 }) => {
   );
 };
 
-export default Contact;
-
+export default function Page() {
+  const h1 = getH1ForPath("/contact-us");
+  return <Contact h1={h1} />;
+}

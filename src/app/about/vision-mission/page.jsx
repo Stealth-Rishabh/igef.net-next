@@ -19,6 +19,7 @@ import {
   UserCheck,
 } from "lucide-react";
 import Image from "next/image";
+import { getH1ForPath } from "@/lib/seo";
 
 const institutionalData = [
   {
@@ -110,7 +111,10 @@ const VisionAndMission = ({ h1 }) => {
   );
 };
 
-export default VisionAndMission;
+export default function Page() {
+  const h1 = getH1ForPath("/about/vision-mission");
+  return <VisionAndMission h1={h1} />;
+}
 
 const VisionAndMissionSection = ({ data, order }) => {
   return (

@@ -22,8 +22,9 @@ import { Button } from "@/components/ui/button";
 import { resourcesData } from "../../components/footer/data";
 // Data structure for resources
 import Heading from "@/components/Heading";
+import { getH1ForPath } from "@/lib/seo";
 
-export default function OnlineLearningResources({ h1 }) {
+function OnlineLearningResources({ h1 }) {
   const renderCards = (resources) => {
     return resources.map((resource, index) => {
       const IconComponent = resource.icon;
@@ -106,4 +107,9 @@ export default function OnlineLearningResources({ h1 }) {
       </div>
     </div>
   );
+}
+
+export default function Page() {
+  const h1 = getH1ForPath("/online-learning-resources");
+  return <OnlineLearningResources h1={h1} />;
 }

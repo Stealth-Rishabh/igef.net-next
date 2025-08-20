@@ -18,6 +18,7 @@ import Newsletter from "@/components/Newsletter";
 import ImgAndBreadcrumb from "@/components/ImgAndBreadcrumb";
 import { galleryData } from "./galleryData";
 import Image from "next/image";
+import { getH1ForPath } from "@/lib/seo";
 
 const breadcrumbItems = [{ href: "/", label: "Home" }, { label: "Gallery" }];
 
@@ -230,4 +231,7 @@ const Gallery = ({ h1 }) => {
   );
 };
 
-export default Gallery;
+export default function Page() {
+  const h1 = getH1ForPath("/gallery");
+  return <Gallery h1={h1} />;
+}

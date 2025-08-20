@@ -21,6 +21,7 @@ import {
 } from "@/components/ui/table";
 import NoPaperFormsWidget from "../../CRM/NoPaperFormsWidget";
 import Image from "next/image";
+import { getH1ForPath } from "@/lib/seo";
 
 const collegeCourses = {
   postgraduate: [
@@ -219,7 +220,10 @@ const Admission = ({ h1 }) => {
   );
 };
 
-export default Admission;
+export default function Page() {
+  const h1 = getH1ForPath("/admissions");
+  return <Admission h1={h1} />;
+}
 
 const renderTable = (courses) => (
   <Table>

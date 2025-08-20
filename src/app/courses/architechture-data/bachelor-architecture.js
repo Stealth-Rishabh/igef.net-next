@@ -236,110 +236,79 @@ export const ARCHITECTURE_DATA = {
             "Integration of advanced computer applications in architectural design",
           ],
         },
-      ],
-
-    // {
-    //   label: "instructor",
-    //   icon: React.createElement(User, { className: "w-4 h-4" }),
-    //   content: [
-    //     {
-    //       label: "Name",
-    //       data: "Dr. Arjun Mehta",
-    //     },
-    //     {
-    //       label: "Title",
-    //       data: "Professor and Head of Department",
-    //     },
-    //     {
-    //       label: "Degree",
-    //       data: "Ph.D. in Architecture from IIT Delhi",
-    //     },
-    //     {
-    //       label: "Specialization",
-    //       data: "Sustainable Architecture and Urban Design",
-    //     },
-    //     {
-    //       label: "Bio",
-    //       data:
-    //         "Dr. Arjun Mehta has over 20 years of experience in teaching and research in the field of architecture. He has published numerous papers in reputed journals and has been involved in several high-profile architectural projects.",
-    //     },
-    //     {
-    //       label: "Avatar",
-    //       data: "/placeholder.svg?height=64&width=64",
-    //     },
-    //   ],
-    // },
-    {
-      label: "faqs",
-      icon: React.createElement(HelpCircle, { className: "w-4 h-4" }),
-      content: [
         {
-          label: "FAQ 1",
-          data: {
-            question:
-              "What are the admission requirements for the B.Arch program?",
-            answer:
-              "Candidates must have passed the 10+2 examination with at least 50% aggregate marks in Physics, Chemistry, and Mathematics. Alternatively, candidates with a 10+3 diploma in engineering with Mathematics as a compulsory subject and at least 50% marks in aggregate are also eligible. Additionally, students must clear the National Aptitude Test in Architecture (NATA).",
-          },
+          label: "faqs",
+          icon: React.createElement(HelpCircle, { className: "w-4 h-4" }),
+          content: [
+            {
+              label: "FAQ 1",
+              data: {
+                question:
+                  "What are the admission requirements for the B.Arch program?",
+                answer:
+                  "Candidates must have passed the 10+2 examination with at least 50% aggregate marks in Physics, Chemistry, and Mathematics. Alternatively, candidates with a 10+3 diploma in engineering with Mathematics as a compulsory subject and at least 50% marks in aggregate are also eligible. Additionally, students must clear the National Aptitude Test in Architecture (NATA).",
+              },
+            },
+            {
+              label: "FAQ 2",
+              data: {
+                question: "Is the B.Arch program accredited?",
+                answer:
+                  "Yes, Indo Global Colleges is an accredited institution. Accreditation ensures that the degree is recognized and valued by employers and other educational institutions.",
+              },
+            },
+            {
+              label: "FAQ 3",
+              data: {
+                question:
+                  "What career opportunities are available after completing the B.Arch program?",
+                answer:
+                  "Graduates can pursue careers in architectural firms, construction companies, urban planning departments, and various other sectors. They can also opt for higher studies or specialized certifications to enhance their career prospects.",
+              },
+            },
+            {
+              label: "FAQ 4",
+              data: {
+                question:
+                  "Are there internship opportunities during the B.Arch program?",
+                answer:
+                  "Yes, the program includes practical training and apprenticeships with registered architects and organizations that provide services related to designing and construction, offering valuable hands-on experience.",
+              },
+            },
+          ],
         },
         {
-          label: "FAQ 2",
-          data: {
-            question: "Is the B.Arch program accredited?",
-            answer:
-              "Yes, Indo Global Colleges is an accredited institution. Accreditation ensures that the degree is recognized and valued by employers and other educational institutions.",
-          },
-        },
-        {
-          label: "FAQ 3",
-          data: {
-            question:
-              "What career opportunities are available after completing the B.Arch program?",
-            answer:
-              "Graduates can pursue careers in architectural firms, construction companies, urban planning departments, and various other sectors. They can also opt for higher studies or specialized certifications to enhance their career prospects.",
-          },
-        },
-        {
-          label: "FAQ 4",
-          data: {
-            question:
-              "Are there internship opportunities during the B.Arch program?",
-            answer:
-              "Yes, the program includes practical training and apprenticeships with registered architects and organizations that provide services related to designing and construction, offering valuable hands-on experience.",
-          },
-        },
-      ],
-    },
-    {
-      label: "reviews",
-      icon: React.createElement(Star, { className: "w-4 h-4" }),
-      content: [
-        {
-          label: "Review 1",
-          data: {
-            name: "Anjali Verma",
-            rating: 5,
-            comment:
-              "The B.Arch program at Indo Global Colleges is outstanding. The curriculum is comprehensive, and the faculty are highly knowledgeable and supportive.",
-          },
-        },
-        {
-          label: "Review 2",
-          data: {
-            name: "Rohit Sharma",
-            rating: 4,
-            comment:
-              "Great learning environment with excellent infrastructure. The practical training helped me gain real-world experience.",
-          },
-        },
-        {
-          label: "Review 3",
-          data: {
-            name: "Sneha Gupta",
-            rating: 5,
-            comment:
-              "I highly recommend this college for architecture. The emphasis on both theoretical and practical aspects prepared me well for my career.",
-          },
+          label: "reviews",
+          icon: React.createElement(Star, { className: "w-4 h-4" }),
+          content: [
+            {
+              label: "Review 1",
+              data: {
+                name: "Anjali Verma",
+                rating: 5,
+                comment:
+                  "The B.Arch program at Indo Global Colleges is outstanding. The curriculum is comprehensive, and the faculty are highly knowledgeable and supportive.",
+              },
+            },
+            {
+              label: "Review 2",
+              data: {
+                name: "Rohit Sharma",
+                rating: 4,
+                comment:
+                  "Great learning environment with excellent infrastructure. The practical training helped me gain real-world experience.",
+              },
+            },
+            {
+              label: "Review 3",
+              data: {
+                name: "Sneha Gupta",
+                rating: 5,
+                comment:
+                  "I highly recommend this college for architecture. The emphasis on both theoretical and practical aspects prepared me well for my career.",
+              },
+            },
+          ],
         },
       ],
     },

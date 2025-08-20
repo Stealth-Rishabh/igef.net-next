@@ -9,6 +9,7 @@ import Newsletter from "@/components/Newsletter";
 // import { Link } from "react-router-dom";
 import AboutSidebar from "@/components/AboutSidebar";
 import Image from "next/image";
+import { getH1ForPath } from "@/lib/seo";
 
 const breadcrumbItems = [
   { href: "/", label: "Home" },
@@ -58,7 +59,10 @@ const EminentFaculty = ({ h1 }) => {
   );
 };
 
-export default EminentFaculty;
+export default function Page() {
+  const h1 = getH1ForPath("/about/eminent-faculty");
+  return <EminentFaculty h1={h1} />;
+}
 
 const FacultyMember = () => {
   const team = [

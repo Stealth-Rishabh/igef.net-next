@@ -1,5 +1,7 @@
 import SpotlightAndEvents from "./SpotlightAndEvents";
+import { getH1ForPath } from "@/lib/seo";
 
 export default function SpotlightsPage() {
-  return <SpotlightAndEvents h1="Explore Our Spotlights & Events" />;
+  const h1 = getH1ForPath("/spotlights");
+  return <SpotlightAndEvents h1={h1} />;
 }

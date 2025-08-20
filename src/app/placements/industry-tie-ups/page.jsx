@@ -33,6 +33,7 @@ import {
   Brain,
   Heart,
 } from "lucide-react";
+import { getH1ForPath } from "@/lib/seo";
 
 const sidebarLinks = [
   { href: "/placements/campus-recruitments", label: "Campus Recruitments" },
@@ -76,7 +77,10 @@ const IndustryTieUps = ({ h1 }) => {
   );
 };
 
-export default IndustryTieUps;
+export default function Page() {
+  const h1 = getH1ForPath("/placements/industry-tie-ups");
+  return <IndustryTieUps h1={h1} />;
+}
 
 const partnerships = [
   {

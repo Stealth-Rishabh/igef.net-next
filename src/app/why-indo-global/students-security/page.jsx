@@ -8,6 +8,7 @@ import Newsletter from "@/components/Newsletter";
 import AboutSidebar from "@/components/AboutSidebar";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
+import { getH1ForPath } from "@/lib/seo";
 
 const sidebarLinks = [
   {
@@ -64,7 +65,10 @@ const StudentSecurity = ({ h1 }) => {
   );
 };
 
-export default StudentSecurity;
+export default function Page() {
+  const h1 = getH1ForPath("/why-indo-global/students-security");
+  return <StudentSecurity h1={h1} />;
+}
 
 const features = [
   {

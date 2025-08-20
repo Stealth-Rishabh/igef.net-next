@@ -9,6 +9,7 @@ import AboutSidebar from "@/components/AboutSidebar";
 import { CheckSquare } from "lucide-react";
 import { infrastructureData } from "../data";
 import { InfrastructureMarquee3D } from "./InfrastructureMarquee3D";
+import { getH1ForPath } from "@/lib/seo";
 const sidebarLinks = [
   {
     href: "/why-indo-global/industry-oriented-curriculum",
@@ -65,7 +66,10 @@ const Infrastructure = ({ h1 }) => {
   );
 };
 
-export default Infrastructure;
+export default function Page() {
+  const h1 = getH1ForPath("/why-indo-global/infrastructure");
+  return <Infrastructure h1={h1} />;
+}
 
 const StoryItem = ({ item, index, stories }) => {
   const { text } = item;
