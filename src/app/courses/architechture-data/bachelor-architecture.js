@@ -237,7 +237,6 @@ export const ARCHITECTURE_DATA = {
           ],
         },
       ],
-    },
 
     // {
     //   label: "instructor",

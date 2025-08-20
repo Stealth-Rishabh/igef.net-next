@@ -11,7 +11,7 @@ const sidebarLinks = [
     href: "/why-indo-global/industry-oriented-curriculum",
     label: "Industry Oriented Curriculum",
   },
-  { href: "/why-indo-global/entrepreneurship", label: "Entrepreneurship" },
+
   { href: "/why-indo-global/sports-arena", label: "Sports Arena" },
   { href: "/why-indo-global/infrastructure", label: "Infrastructure" },
   {

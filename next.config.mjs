@@ -28,7 +28,13 @@ const nextConfig = {
       },
       {
         protocol: "https",
-        hostname: "th.bing.com",
+        hostname: "www.bennett.edu.in",
+        port: "",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "img.freepik.com",
         port: "",
         pathname: "/**",
       },
