@@ -1,5 +1,6 @@
+"use client";
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { ChevronDown, Plus } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
@@ -7,7 +8,7 @@ import {
   CollapsibleContent,
   CollapsibleTrigger,
 } from "@/components/ui/collapsible";
-import img from "../assets/breadcrumb.png";
+import Image from "next/image";
 
 export default function CourseSidebar() {
   const [isSticky, setIsSticky] = useState(false);
@@ -116,9 +117,7 @@ export default function CourseSidebar() {
     },
     {
       name: "Pharmacy",
-      courses: [
-        { href: "/courses/b-pharmacy", label: "B.Pharmacy" },
-      ],
+      courses: [{ href: "/courses/b-pharmacy", label: "B.Pharmacy" }],
     },
   ];
 
@@ -187,7 +186,7 @@ export default function CourseSidebar() {
                 {category.courses.map((course) => (
                   <Link
                     key={course.href}
-                    to={course.href}
+                    href={course.href}
                     className="block px-8 py-2 text-sm text-gray-500/90 transition-all duration-100  rounded hover:pl-6 hover:text-secondary-color hover:bg-gray-100 hover:font-medium"
                   >
                     {course.label}
@@ -198,23 +197,24 @@ export default function CourseSidebar() {
           ))}
         </nav>
 
-        <Link to="https://admissions.igef.net">
+        <Link href="https://admissions.igef.net">
           <Button className="w-full px-4 py-2 mb-6 font-bold text-white rounded bg-primary-color hover:bg-red-600 transition-colors duration-200">
             Apply Online
           </Button>
         </Link>
         <div className="relative flex-grow overflow-hidden rounded-md h-56">
-          <img
-            src={img}
+          <Image
+            src="/assets/breadcrumb.png"
             alt="Discover Our Partnerships"
-            className="absolute inset-0 object-cover w-full h-full"
+            fill
+            className="absolute inset-0 object-cover"
           />
           <div className="absolute inset-0 bg-black bg-opacity-40"></div>
           <div className="absolute inset-0 flex flex-col items-center justify-center p-4 text-white">
             <p className="mb-3 text-xl font-semibold text-center">
               Build Your Career
             </p>
-            <Link to="/contact-us">
+            <Link href="/contact-us">
               <Button
                 variant="outline"
                 className="text-white transition-colors bg-transparent border-white hover:bg-white hover:text-black"

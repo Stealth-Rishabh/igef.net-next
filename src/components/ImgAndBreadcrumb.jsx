@@ -1,3 +1,4 @@
+"use client";
 import { useState } from "react";
 import {
   Breadcrumb,
@@ -7,7 +8,7 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { useMediaQuery } from "@/hooks/use-media-query";
 
 import {
@@ -22,7 +23,7 @@ import {
 } from "@/components/ui/drawer";
 import { Button } from "@/components/ui/button";
 import { Ellipsis, ChevronRightIcon } from "lucide-react";
-import WordPullUp from "./ui/word-pull-up2";
+import WordPullUp from "@/components/ui/word-pull-up2";
 
 const ITEMS_TO_DISPLAY = 3;
 
@@ -51,7 +52,7 @@ const ImgAndBreadcrumb = ({ imageSrc, imageAlt, breadcrumbItems, title }) => {
                   <>
                     <BreadcrumbLink asChild className="">
                       <Link
-                        to={item.href}
+                        href={item.href}
                         className="text-lg font-semibold text-white transition-colors duration-100 ease-in-out hover:text-slate-100 "
                       >
                         {item.label}
@@ -76,10 +77,11 @@ const ImgAndBreadcrumb = ({ imageSrc, imageAlt, breadcrumbItems, title }) => {
               {breadcrumbItems.length > 0 && (
                 <BreadcrumbItem className="text-white mobile-breadcrumb-item">
                   <BreadcrumbLink asChild className="text-white">
-                    <Link to={breadcrumbItems[0].href}
-                     className=" font-semibold text-white transition-colors duration-100 ease-in-out hover:text-slate-100 ">
+                    <Link
+                      href={breadcrumbItems[0].href}
+                      className=" font-semibold text-white transition-colors duration-100 ease-in-out hover:text-slate-100 "
+                    >
                       {breadcrumbItems[0].label}
-                      
                     </Link>
                   </BreadcrumbLink>
                 </BreadcrumbItem>
@@ -103,7 +105,7 @@ const ImgAndBreadcrumb = ({ imageSrc, imageAlt, breadcrumbItems, title }) => {
                           {breadcrumbItems.slice(1, -2).map((item, index) => (
                             <Link
                               key={index}
-                              to={item.href ? item.href : "#"}
+                              href={item.href ? item.href : "#"}
                               className="py-1 text-sm text-white"
                             >
                               {item.label}
@@ -128,7 +130,7 @@ const ImgAndBreadcrumb = ({ imageSrc, imageAlt, breadcrumbItems, title }) => {
                       asChild
                       className="truncate max-w-20 md:max-w-none text-white"
                     >
-                      <Link to={item.href}>{item.label}</Link>
+                      <Link href={item.href}>{item.label}</Link>
                     </BreadcrumbLink>
                   ) : (
                     <BreadcrumbPage className="truncate max-w-20 md:max-w-none text-white">

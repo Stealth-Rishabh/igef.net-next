@@ -1,27 +1,27 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"
-import { motion } from "framer-motion"
-import { Phone } from "lucide-react"
+import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+import { Phone } from "lucide-react";
 
 export default function CallUsButton() {
-  const [expanded, setExpanded] = useState(false)
+  const [expanded, setExpanded] = useState(false);
 
   // Toggle the expanded state for continuous animation
   useEffect(() => {
     const interval = setInterval(() => {
-      setExpanded((prev) => !prev)
-    }, 2000) // Toggle every 2 seconds
+      setExpanded((prev) => !prev);
+    }, 2000); // Toggle every 2 seconds
 
-    return () => clearInterval(interval)
-  }, [])
+    return () => clearInterval(interval);
+  }, []);
 
   // Spring configuration for smooth, bouncy animations
   const springConfig = {
     type: "spring",
     stiffness: 500,
     damping: 30,
-  }
+  };
 
   return (
     <div className="flex items-center justify-center p-8">
@@ -91,5 +91,5 @@ export default function CallUsButton() {
         </motion.div>
       </motion.button>
     </div>
-  )
+  );
 }

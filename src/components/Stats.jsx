@@ -1,5 +1,5 @@
 import { Users, Calendar, GraduationCap, BookOpen, School } from "lucide-react";
-import NumberTicker from "../components/ui/number-ticker";
+import NumberTicker from "@/components/ui/number-ticker";
 
 const Stats = () => {
   const stats = [

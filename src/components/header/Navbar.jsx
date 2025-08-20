@@ -98,14 +98,14 @@ export default function Navbar() {
   return (
     <div className="bg-red-600 px-4 py-4">
       <div className="w-full sm:max-w-[640px] md:max-w-[768px] lg:max-w-7xl xl:max-w-[1330px] 2xl:max-w-[1536px] mx-auto flex items-center justify-between overflow-hidden sm:h-20">
-        <div className="flex items-center space-x-10">
+        <div className="flex items-center  space-x-10">
           <Link href="/">
             <Image
               src="/assets/logo.png"
               alt="Indo Global Group of Colleges"
               width={80}
               height={80}
-              className="h-16 sm:h-20 object-contain "
+              className="h-16 w-full sm:h-20 object-contain "
             />
           </Link>
           <Image
@@ -113,7 +113,7 @@ export default function Navbar() {
             alt="23 Years"
             width={96}
             height={96}
-            className="sm:h-24 h-20 object-contain"
+            className="sm:h-24 w-fit h-20 object-contain"
           />
         </div>
         <nav>

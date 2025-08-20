@@ -1,7 +1,7 @@
 import { memo } from "react";
-import WordPullUp from "../components/ui/word-pull-up"; // Assuming this component exists
-import WordFadeIn from "../components/ui/word-fade-in";
-// import GradualSpacing from '../components/ui/gradual-spacing';  // Assuming this component exists
+import WordPullUp from "@/components/ui/word-pull-up"; // Assuming this component exists
+import WordFadeIn from "@/components/ui/word-fade-in";
+// import GradualSpacing from '@/components/ui/gradual-spacing';  // Assuming this component exists
 
 const Heading = memo(
   ({

@@ -1,7 +1,8 @@
+"use client";
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import img from "../assets/breadcrumb.png";
+import Image from "next/image";
 
 const AboutSidebar = ({ sidebarLinks }) => {
   const [isSticky, setIsSticky] = useState(false);
@@ -47,50 +48,51 @@ const AboutSidebar = ({ sidebarLinks }) => {
           {sidebarLinks.map((link) => (
             <Link
               key={link.href}
-              to={link.href}
+              href={link.href}
               className="block px-4 py-2 text-sm text-gray-500 transition-all duration-200 rounded hover:pl-6 hover:text-secondary-color hover:bg-gray-100 hover:font-medium"
             >
               {link.label}
             </Link>
           ))}
         </nav>
-        <Link to="https://admissions.igef.net">
+        <Link href="https://admissions.igef.net">
           <Button className="w-full px-4 py-2 mb-6 font-bold text-white rounded bg-primary-color hover:bg-red-600">
             Apply Online
           </Button>
         </Link>
         <div className="relative flex-grow overflow-hidden rounded-md  h-56">
-          <img
-            src={img}
+          <Image
+            src="/assets/breadcrumb.png"
             alt="cta"
-            className="absolute inset-0 object-cover w-full h-full"
+            fill
+            className="absolute inset-0 object-cover"
           />
           <div className="absolute inset-0 bg-black opacity-40"></div>
           <div className="absolute inset-0 flex flex-col items-center justify-center p-4 text-white">
             <p className="mb-3 text-xl font-semibold text-center max-w-40">
               Build Your Career
             </p>
-            <Link to="/contact-us">
+            <Link href="/contact-us">
               <Button
                 variant="outline"
-              className="text-white transition-colors bg-transparent border-white hover:bg-white hover:text-black"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="w-5 h-5 mr-2"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
+                className="text-white transition-colors bg-transparent border-white hover:bg-white hover:text-black"
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M13 10V3L4 14h7v7l9-11h-7z"
-                />
-              </svg>
-              Get Started
-            </Button>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="w-5 h-5 mr-2"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M13 10V3L4 14h7v7l9-11h-7z"
+                  />
+                </svg>
+                Get Started
+              </Button>
             </Link>
           </div>
         </div>

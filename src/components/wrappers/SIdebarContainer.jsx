@@ -1,10 +1,10 @@
-import Heading from "../../components/Heading";
-import ImgAndBreadcrumb from "../../components/ImgAndBreadcrumb";
-import Container from "../../components/wrappers/Container";
-import img from "../../assets/breadcrumb.png";
-import Stats from "../../components/Stats";
-import Newsletter from "../../components/Newsletter";
-import AboutSidebar from "../../components/AboutSidebar";
+"use client";
+import Heading from "@/components/Heading";
+import ImgAndBreadcrumb from "@/components/ImgAndBreadcrumb";
+import Container from "@/components/wrappers/Container";
+import Stats from "@/components/Stats";
+import Newsletter from "@/components/Newsletter";
+import AboutSidebar from "@/components/AboutSidebar";
 
 const sidebarLinks = [
   {
@@ -33,7 +33,7 @@ const Entrepreneurship = () => {
     <div className="relative min-h-screen">
       <ImgAndBreadcrumb
         title="Why Indo Global"
-        imageSrc={img}
+        imageSrc="/assets/breadcrumb.png"
         imageAlt="Description of the image"
         breadcrumbItems={breadcrumbItems}
       />
