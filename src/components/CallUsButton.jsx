@@ -24,7 +24,7 @@ export default function CallUsButton() {
   };
 
   return (
-    <div className="flex items-center justify-center p-8">
+    <div className="fixed bottom-24 sm:bottom-28 -right-12 z-50">
       <motion.button
         className="relative flex items-center justify-center bg-red-600 text-white rounded-full shadow-lg hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50"
         initial={{ width: 56, height: 56 }}

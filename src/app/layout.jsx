@@ -2,6 +2,9 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/header/Header";
 import Footer from "@/components/footer/Footer";
+import ScrollToTopWithBorder from "@/components/ScrollToTopWithBorder";
+import CallUsButton from "@/components/CallUsButton";
+import ChatBot from "@/components/ChatBot";
 import { seoConfig, getCanonicalUrl } from "@/data/seoConfig";
 
 const geistSans = Geist({
@@ -88,6 +91,9 @@ export default function RootLayout({ children }) {
         <Header />
         <main>{children}</main>
         <Footer />
+        <ScrollToTopWithBorder />
+        <CallUsButton />
+        <ChatBot />
       </body>
     </html>
   );
