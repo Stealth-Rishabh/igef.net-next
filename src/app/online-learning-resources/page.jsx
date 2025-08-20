@@ -19,7 +19,7 @@ import {
   Link,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { resourcesData } from "./data";
+import { resourcesData } from "../../components/footer/data";
 // Data structure for resources
 import Heading from "@/components/Heading";
 
