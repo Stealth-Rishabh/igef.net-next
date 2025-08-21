@@ -1,3 +1,4 @@
+"use client";
 import { memo } from "react";
 import WordPullUp from "@/components/ui/word-pull-up2"; // Assuming this component exists
 import WordFadeIn from "@/components/ui/word-fade-in";
@@ -34,4 +35,4 @@ const Heading = memo(
   }
 );
 Heading.displayName = "Heading";
-export default memo(Heading);
+export default Heading;

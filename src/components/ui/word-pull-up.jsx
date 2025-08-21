@@ -62,4 +62,4 @@ const WordPullUp = memo(
 );
 WordPullUp.displayName = "WordPullUp";
 
-export default memo(WordPullUp);
+export default WordPullUp;
