@@ -6,6 +6,7 @@ import ScrollToTopWithBorder from "@/components/ScrollToTopWithBorder";
 import CallUsButton from "@/components/CallUsButton";
 import ChatBot from "@/components/ChatBot";
 import { seoConfig, getCanonicalUrl } from "@/data/seoConfig";
+import { GoogleTagManager } from "@next/third-parties/google";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -44,6 +45,11 @@ export const metadata = {
   metadataBase: new URL("https://www.igef.net"),
   alternates: {
     canonical: getCanonicalUrl("/"),
+  },
+  icons: {
+    icon: "/igef.webp",
+    shortcut: "/igef.webp",
+    apple: "/igef.webp",
   },
   openGraph: {
     type: "website",
@@ -87,6 +93,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      {process.env.NODE_ENV === "production" && (
+        <GoogleTagManager gtmId="GTM-W7BCFDX" />
+      )}
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <Header />
         <main>{children}</main>
