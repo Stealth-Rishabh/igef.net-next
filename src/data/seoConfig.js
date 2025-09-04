@@ -363,6 +363,23 @@ export const seoConfig = {
       "Sign up for the IGEF Alumni Portal to connect with fellow alumni, access exclusive resources, and stay connected with your alma mater.",
     h1: "Join the IGEF Alumni Network - Sign Up Today",
   },
+
+
+  termsAndConditions: {
+    path: "/terms-and-conditions",
+    title: "Terms and Conditions - IGEF",
+    description:
+      "Explore the terms and conditions of IGEF. Read about our policies and guidelines for students, faculty, and staff.",
+    h1: "Terms and Conditions - IGEF",
+  },
+
+  privacyPolicy: {
+    path: "/privacy-policy",
+    title: "Privacy Policy - IGEF",
+    description:
+      "Explore the privacy policy of IGEF. Read about how we collect, use, and protect your personal information.",
+    h1: "Privacy Policy - IGEF",
+  },
 };
 
 export const getSeoDataByPath = (path) => {

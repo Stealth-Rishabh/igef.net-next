@@ -78,6 +78,9 @@ export default function Footer() {
         { name: "Jobs @Indo Global", path: "/careers" },
         { name: "View Virtual Tour", path: "/" },
         { name: "Contact Directory", path: "/contact-us" },
+        { name: "Terms and Conditions", path: "/terms-and-conditions" },
+        { name: "Privacy Policy", path: "/privacy-policy" },
+        
       ],
     },
   ];
@@ -113,21 +116,21 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-gray-900 text-white pt-10 text-lg">
-      <div className="max-w-screen-xl mx-auto px-4 md:px-8 py-5">
+    <footer className="pt-10 text-lg text-white bg-gray-900">
+      <div className="px-4 py-5 mx-auto max-w-screen-xl md:px-8">
         {/* First section with social icons and address */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6 sm:gap-8 mb-8">
+        <div className="grid grid-cols-2 gap-6 mb-8 sm:grid-cols-3 md:grid-cols-6 sm:gap-8">
           <div>
-            <h2 className=" sm:text-3xl font-bold text-red-600 mb-4">
+            <h2 className="mb-4 font-bold text-red-600 sm:text-3xl">
               Explore. Discover. Connect.
             </h2>
-            <div className="flex flex-wrap gap-4 mb-6 ">
+            <div className="flex flex-wrap gap-4 mb-6">
               {socialIcons.map((platform) => (
                 <a
                   key={platform.name}
                   href={platform.href}
                   target="_blank"
-                  className="bg-red-600 text-white p-2 rounded-full hover:bg-red-700 transition-colors"
+                  className="p-2 text-white bg-red-600 rounded-full transition-colors hover:bg-red-700"
                   aria-label={platform.name}
                 >
                   <platform.icon size={24} />
@@ -136,7 +139,7 @@ export default function Footer() {
             </div>
           </div>
           <div className="space-y-2">
-            <h3 className="sm:text-2xl font-bold text-red-600 mb-4">
+            <h3 className="mb-4 font-bold text-red-600 sm:text-2xl">
               Campus Address{" "}
             </h3>
             <p className="text-sm">INDO GLOBAL EDUCATION CITY</p>
@@ -161,20 +164,20 @@ export default function Footer() {
           {/* Footer sections with links */}
           {footerSections.map((section) => (
             <div key={section.label}>
-              <h3 className="sm:text-2xl font-bold text-red-600 mb-4">
+              <h3 className="mb-4 font-bold text-red-600 sm:text-2xl">
                 {section.label}
               </h3>
               <ul className="space-y-2">
                 {section.items.map((item) => (
                   <li key={item.name} className="text-sm">
                     {item.name === "Blogs" ? (
-                      <a href="/blog" target="_blank" rel="noopener noreferrer" className="hover:text-red-600 transition-colors">
+                      <a href="/blog" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-red-600">
                         {item.name}
                       </a>
                     ) : item.isDownload || item.isLink ? (
                       <button
                         onClick={() => handleItemClick(item)}
-                        className="flex relative items-center justify-start hover:text-red-600 group transition-colors"
+                        className="flex relative justify-start items-center transition-colors hover:text-red-600 group"
                       >
                         {item.name}
                         {item.isDownload && (
@@ -193,7 +196,7 @@ export default function Footer() {
                     ) : (
                       <Link
                         href={item.path}
-                        className="hover:text-red-600 transition-colors"
+                        className="transition-colors hover:text-red-600"
                       >
                         {item.name}
                       </Link>
@@ -206,11 +209,11 @@ export default function Footer() {
         </div>
       </div>
       {/* Footer Bottom */}
-      <div className="py-6 px-2 border-t border-gray-800 bg-primary-color text-center">
-        <p className="text-white mb-2  text-sm sm:text-xl">
-          © Copyright - Indo Global Education Foundation All Rights <a href="https://www.thedesignvillage.org/" className="text-decoration-none text-inherit cursor-default">Reserved</a>
+      <div className="px-2 py-6 text-center border-t border-gray-800 bg-primary-color">
+        <p className="mb-2 text-sm text-white sm:text-xl">
+          © Copyright - Indo Global Education Foundation All Rights Reserved
         </p>
-        <div className=" text-xs sm:text-base text-white">
+        <div className="text-xs text-white sm:text-base">
           <p>
             Phone: <a href="tel:+91-7307211222">+91-7307211222</a> | Website:{" "}
             <a
